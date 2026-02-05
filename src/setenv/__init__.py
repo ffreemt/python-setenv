@@ -11,7 +11,7 @@ from pathlib import Path
 from dotenv import dotenv_values, find_dotenv
 # from loguru import logger
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 
 def hello() -> str:

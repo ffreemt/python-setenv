@@ -1,6 +1,6 @@
 [project]
 name = "python-setenv"
-version = "0.0.2"
+version = "0.0.3"
 description = "Set env (e.g. HF_TOKEN) from colab/kaggle secrets or dotenv .env env files"
 readme = "README.md"
 authors = [
@@ -30,4 +30,4 @@ include = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["setenv"]
+packages = ["src/setenv"]
