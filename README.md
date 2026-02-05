@@ -36,21 +36,21 @@ pip install python-setenv
 HF_TOKEN=...
 WANDB_API_KEY=...
 ```
-In some cases, files start with a dot are not allowed. Rename `.env` to `dotenv` or `env` instead, `set_env` will auto-search for `.env`, `dotenv` and `env`.
+In some cases, files start with a dot are not allowed. Rename `.env` to `dotenv` or `env` instead, `setenv` will auto-search for `.env`, `dotenv` and `env`.
 
 ## Use it
 ```
 from setenv import setenv
 
 # e.g.
-set_env("HF_TOKEN")
-set_env("WANDB_API_KEY")
-set_env("NGROK_AUTHCODE")
+setenv("HF_TOKEN")
+setenv("WANDB_API_KEY")
+setenv("NGROK_AUTHCODE")
 ```
 
 Sometimes we want to set HF_TOKEN to HF_TOKEN_W (with write-permission).
 ```
-from set_env import set_env
-set_env(env_var="HF_TOKEN", source_var="HF_TOKEN_W")
+from setenv import setenv
+setenv(env_var="HF_TOKEN", source_var="HF_TOKEN_W")
 ```
 This is effectively equivalent to `os.environ["HF_TOKEN"] = get_secret("HF_TOKEN_W")` when in colab or kaggle, or `os.environ["HF_TOKEN"] = dotenv.dotenv_values().get("HF_TOKEN_W")`.
